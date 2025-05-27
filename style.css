@@ -53,7 +53,7 @@
   flex-direction: column;
   justify-content: flex-start;   /* Start items at the top */
   align-items: center;
-  row-gap: 350px;                 /* Add space between all children */
+  row-gap: 380px;                 /* Add space between all children */
   color: white;
   text-align: center;
   width: 100vw;
