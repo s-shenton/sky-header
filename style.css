@@ -14,8 +14,6 @@
     font-style: normal;
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -33,46 +31,46 @@
   ::-webkit-scrollbar { 
       display: none; 
   }
-.fixed {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly; /* or space-between */
-  align-items: center;
-  color: white;
-  text-align: center;
-  width: 100vw;
-  height: 100vh; /* Fill the viewport */
-  /* Remove position, padding, top, transform */
-}
-  
+
 .fixed h1 {
   font-family: 'CentraNo2', Arial, sans-serif;
   font-weight: 500;
   font-size: 48px;
-  margin-top: 300px;
-  margin-bottom: 300px;
-  
-
+  margin: 0; /* Remove large margins */
 }
 
 .fixed p {
   font-family: 'CentraNo2', Arial, sans-serif;
   font-weight: 300;
   font-size: 24px;
-  margin-top: 300px;
-  margin-bottom: 200px;
-  margin-left: 400px;
-  margin-right: 400px;
-
+  margin: 0;
+  width: 100%;
+  max-width: 800px; /* or whatever width you prefer */
 }
 
-  .parallax {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 1px;
-    perspective: 1px;
-  }
+.fixed {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;   /* Start items at the top */
+  align-items: center;
+  row-gap: 350px;                 /* Add space between all children */
+  color: white;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 300px;
+  padding-bottom: 40px;
+}
+
+.parallax {
+  position: relative;
+  min-height: 100vh;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
   
   .parallax__layer {
     position: absolute;
