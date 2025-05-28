@@ -84,7 +84,10 @@
   padding: 0;
   pointer-events: none; /* Optional: lets clicks pass through */
 }
-  
+.parallax__layer--back { background: rgba(255,0,0,0.1); }
+.parallax__layer--back2 { background: rgba(0,255,0,0.1); }
+.parallax__layer--back3 { background: rgba(0,0,255,0.1); }
+
   .parallax__layer--base {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
