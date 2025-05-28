@@ -1,3 +1,6 @@
+console.log("JS loaded");
+
+
 document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', function() {
     const scrolled = window.scrollY;
