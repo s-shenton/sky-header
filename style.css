@@ -90,18 +90,20 @@
     transform: translateZ(0);
   }
   
-  .parallax__layer--back {
-    -webkit-transform: translateZ(-2px) scale(3);
-    transform: translateZ(-2px) scale(3);
-  }
-  .parallax__layer--back2 {
-    -webkit-transform: translateZ(-6px) scale(5);
-    transform: translateZ(-6px) scale(5);
-  }
-  .parallax__layer--back3 {
-    -webkit-transform: translateZ(-12px) scale(6);
-    transform: translateZ(-12px) scale(6);
-  }
+.parallax__layer--back {
+  /* Remove or comment out the next line: */
+  /* transform: translateZ(-2px) scale(3); */
+}
+
+.parallax__layer--back2 {
+  /* Remove or comment out the next line: */
+  /* transform: translateZ(-6px) scale(5); */
+}
+
+.parallax__layer--back3 {
+  /* Remove or comment out the next line: */
+  /* transform: translateZ(-12px) scale(6); */
+}
   
 
   
