@@ -32,11 +32,25 @@
       display: none; 
   }
 
+.fixed {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+  width: 100vw;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  /* Remove overflow-y and max-height! */
+}
+
 .fixed h1 {
   font-family: 'CentraNo2', Arial, sans-serif;
   font-weight: 500;
   font-size: 48px;
-  margin: 0; /* Remove large margins */
+  margin: 200 0 250px 0; /* Only bottom margin for gap after h1 */
 }
 
 .fixed p {
@@ -45,40 +59,31 @@
   font-size: 24px;
   margin: 0;
   width: 100%;
-  max-width: 800px; /* or whatever width you prefer */
+  max-width: 800px;
 }
 
-.fixed {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;   /* Start items at the top */
-  align-items: center;
-  row-gap: 380px;                 /* Add space between all children */
-  color: white;
-  text-align: center;
-  width: 100vw;
-  height: 100vh;
-  padding-top: 300px;
-  padding-bottom: 40px;
+.fixed p:not(:last-child) {
+  margin-bottom: 250px; /* Gap between paragraphs */
 }
 
 .parallax {
   position: relative;
-  min-height: 100vh;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+  min-height: 100vh; /* Allow to grow with content */
+  overflow: hidden;
   -webkit-perspective: 1px;
   perspective: 1px;
 }
   
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Remove or reduce padding */
+  padding: 0;
+  pointer-events: none; /* Optional: lets clicks pass through */
+}
   
   .parallax__layer--base {
     -webkit-transform: translateZ(0);
@@ -98,10 +103,7 @@
     transform: translateZ(-12px) scale(6);
   }
   
-  /* add some padding to force scrollbars */
-  .parallax__layer {
-    padding: 100vh 0;
-  }
+
   
   .starfield > * {
     background-size: 200px 200px;
@@ -117,13 +119,13 @@
       radial-gradient(2px 2px at 190px 150px, rgb(255, 255, 255), rgba(0, 0, 0, 0));
     background-repeat: repeat;
   }
-  .starfield > * {
-    position: absolute;
-    top: -250%;
-    left: 0;
-    height: 500%;
-    width: 100%;
-  }
+.starfield > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
   
   .starfield span:nth-child(2) {
     transform: rotate(45deg);
