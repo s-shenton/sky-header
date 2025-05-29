@@ -78,7 +78,7 @@
   bottom: 0;
 }
 .fixed p:not(:last-child) {
-  margin-bottom: 180px; /* Large gap between paragraphs */
+  margin-bottom: 250px; /* Large gap between paragraphs */
 }
 .parallax__layer--base {
   -webkit-transform: translateZ(0);
@@ -98,10 +98,7 @@
   transform: translateZ(-12px) scale(6);
 }
 
-/* add some padding to force scrollbars */
-.parallax__layer {
-  padding: 100vh 0;
-}
+
 
 .starfield > * {
   background-size: 200px 200px;
@@ -116,6 +113,10 @@
     radial-gradient(2px 2px at 110px 90px, rgb(255, 0, 0), rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 190px 150px, rgb(255, 200, 0), rgba(0, 0, 0, 0));
   background-repeat: repeat;
+}
+
+.parallax__layer {
+  padding: 100vh 0;
 }
 .starfield > * {
   position: absolute;
