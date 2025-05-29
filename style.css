@@ -78,7 +78,7 @@
   bottom: 0;
 }
 .fixed p:not(:last-child) {
-  margin-bottom: 250px; /* Large gap between paragraphs */
+  margin-bottom: 350px; /* Large gap between paragraphs */
 }
 .parallax__layer--base {
   -webkit-transform: translateZ(0);
